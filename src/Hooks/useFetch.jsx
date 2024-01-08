@@ -6,7 +6,7 @@ import {useState,useEffect} from "react";
 const AppProvider =({children})=>{
     const  [data,setData] = useState([]);
     useEffect(()=>{
-axios.get(URL).then((result)=>setData(result.data.results)
+axios.get(URL).then((response)=>setData(response.data.results)
     )},[])
 return(
     <Context.Provider value={{data}}> 
